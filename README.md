@@ -1,6 +1,6 @@
 # Clasificación No Supervisada de Ruido Sísmico Ambiental en Contexto de Diapiros de Lodo
 
-**Proyect** | Raspberry Shake · ObsPy · Deep Embedded Clustering  
+**Proyecto** | Raspberry Shake · ObsPy · Deep Embedded Clustering  
 **Fecha:** Junio 2026
 
 ---
@@ -12,6 +12,10 @@ Los **diapiros de lodo** son estructuras geológicas formadas por la intrusión 
 El reto central del proyecto es que ese ambiente es **sismológicamente suave** — dominado por ruido antropogénico superficial — exactamente como los entornos urbanos estudiados en la literatura reciente de *urban seismology*. Esto abre la posibilidad de adaptar métodos de clasificación de fuentes urbanas (personas, vehículos, ambiente general) al monitoreo pasivo de diapiros.
 
 La herramienta instrumental es el **Raspberry Shake**, un sismógrafo de bajo costo basado en Raspberry Pi con presencia en una red global de sensores ciudadanos que publican datos libremente vía protocolo FDSN.
+
+![Figura 1. Adaptación de la sismología urbana al monitoreo de volcanes de lodo](fig1.png)
+
+*Figura 1. Transferencia de métodos de clasificación de ruido urbano (vehículos, peatones, ambiente) al monitoreo pasivo de diapiros de lodo mediante DEC sobre datos de Raspberry Shake. El panel B muestra que las distribuciones de PSD de entornos urbanos y de diapiros son comparables en el rango 0.1–5 Hz, lo que justifica la transferencia metodológica.*
 
 ---
 
@@ -126,6 +130,10 @@ $$P_{ij} = \frac{Q_{ij}^2 / \sum_i Q_{ij}}{\sum_j (Q_{ij}^2 / \sum_i Q_{ij})}$$
 3. Fine-tuning DEC            →  minimizar KL(P || Q) iterativamente
 4. Asignación final           →  argmax(Q) por muestra
 ```
+
+![Figura 2. Pipeline completo de DEC para monitoreo sísmico pasivo de diapiros de lodo](fig2.png)
+
+*Figura 2. Pipeline end-to-end: (A) adquisición continua con Raspberry Shake vía FDSN, (B) procesamiento de señal y construcción de espectrogramas STFT 64×64, (C) aprendizaje de representaciones con autoencoder convolucional, (D) Deep Embedded Clustering con inicialización K-Means y optimización KL, (E) interpretación geológica de las clases descubiertas (migración de fluidos, liberación de gases, deformación plástica, ruido antropogénico).*
 
 ---
 
