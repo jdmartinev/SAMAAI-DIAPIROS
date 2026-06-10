@@ -324,8 +324,44 @@ def visualize_clusters(encoder, X, labels, class_names=None):
 | 6 | Comparar PSD entre estación proxy y sensor local | ⬜ Pendiente |
 
 ---
+## 7. Material entregado
 
-## 7. Referencias
+Como complemento al presente informe, se entrega una carpeta de trabajo que contiene los recursos necesarios para reproducir y extender los experimentos propuestos.
+
+**Google Drive Folder**  
+
+[https://drive.google.com/drive/folders/XXXXXXXXXXXXXXXXXXXXXXXX](https://drive.google.com/drive/folders/1J5de9pF0XDPzuTJ5LuKQye5CSvRAdpst?usp=sharing)
+
+
+### 7.1 Réplica del paper de referencia
+
+Se incluye una réplica del trabajo de Mousavi et al. (2019), conservando la arquitectura y el flujo metodológico original basado en Autoencoders Convolucionales y Deep Embedded Clustering (DEC). El objetivo de esta réplica es validar el funcionamiento del pipeline sobre el conjunto de datos utilizado por los autores y establecer una línea base antes de su adaptación al problema de monitoreo sísmico asociado a diapiros de lodo.
+
+Los materiales entregados incluyen:
+
+- Notebook original adaptado para ejecución reproducible.
+- Dataset de referencia utilizado en la publicación.
+- Scripts de entrenamiento y visualización.
+- Configuración de clustering y análisis del espacio latente.
+
+### 7.2 Ejemplo de adquisición y procesamiento de datos Raspberry Shake
+
+También se incluye un notebook demostrativo que muestra el flujo completo para adquirir y procesar datos sísmicos provenientes de la red global Raspberry Shake utilizando ObsPy y los servicios FDSN.
+
+El ejemplo cubre:
+
+1. Descubrimiento de estaciones disponibles en una región de interés.
+2. Descarga de registros sísmicos históricos desde los servidores de Raspberry Shake.
+3. Corrección instrumental y preprocesamiento de señales.
+4. Construcción de espectrogramas para análisis mediante aprendizaje profundo.
+5. Visualización y exploración inicial de los datos.
+
+Este notebook sirve como punto de partida para la construcción de datasets propios y para la posterior adaptación del modelo DEC a señales de ruido sísmico ambiental registradas en zonas de interés para el proyecto SAMA.
+
+La combinación de ambos recursos permite disponer tanto de una implementación funcional del método de referencia como de un flujo completo de adquisición de datos reales, facilitando la transición hacia experimentos específicos de monitoreo pasivo en contextos de diapiros de lodo.
+
+---
+## 8. Referencias
 
 - Mousavi, S. M., Zhu, W., Ellsworth, W., Beroza, G. (2019). *Unsupervised Clustering of Seismic Signals Using Deep Convolutional Autoencoders*. IEEE GRSL. DOI: 10.1109/LGRS.2019.2909218
 - Hasabnis, P., Nilot, E., Li, Y. E. (2024). *Introducing USED: Urban Seismic Event Detection*. Computers & Geosciences. DOI: 10.1016/j.cageo.2024.105561
