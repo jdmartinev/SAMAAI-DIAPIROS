@@ -336,4 +336,4 @@ def visualize_clusters(encoder, X, labels, class_names=None):
 
 ---
 
-*Documento generado como parte del proyecto educativo de monitoreo sísmico de diapiros de lodo con Raspberry Shake.*
+*Documento generado como parte del proyecto de monitoreo sísmico de diapiros de lodo con Raspberry Shake.*
