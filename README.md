@@ -330,7 +330,7 @@ Como complemento al presente informe, se entrega una carpeta de trabajo que cont
 
 **Google Drive Folder**  
 
-[https://drive.google.com/drive/folders/XXXXXXXXXXXXXXXXXXXXXXXX](https://drive.google.com/drive/folders/1J5de9pF0XDPzuTJ5LuKQye5CSvRAdpst?usp=sharing)
+[https://drive.google.com/drive/folders/1J5de9pF0XDPzuTJ5LuKQye5CSvRAdpst?usp=sharing](https://drive.google.com/drive/folders/1J5de9pF0XDPzuTJ5LuKQye5CSvRAdpst?usp=sharing)
 
 
 ### 7.1 Réplica del paper de referencia
